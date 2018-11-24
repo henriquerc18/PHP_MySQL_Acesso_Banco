@@ -11,11 +11,13 @@
 			echo $senha;
 			if($usuario[0]['acesso_idAcesso'] == 1){
 				header("Location: pagina1.html");
-			}/*else if($usuario[0]['acesso_idAcesso'] == 2){
+			}else if($usuario[0]['acesso_idAcesso'] == 2){
 				header("Location: pagina2.html");
-			}else{
+			}else if($usuario[0]['acesso_idAcesso'] == 3){
+				header("Location: admin.html");{
+			}else{				
 				header("Location: pagina3.html");
-			}*/
+			}
 		}else if($_POST['cadastrar']){
 			$login = $_POST['login'];
 			$senha = md5($_POST['senha']);
